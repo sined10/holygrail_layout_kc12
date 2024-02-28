@@ -1,0 +1,38 @@
+:root {
+    --pageBG: #9B4444;
+
+    --c1: #B4B4B8;
+    --c2: #402B3A;
+    --c3: #B1C381;
+    --c4: #F3B95F;
+    --c5: #E4DEBE;
+    --c6: #3C3633;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--pageBG);
+}
+
+.todoListRow {
+    background: radial-gradient(circle at left, var(--c1), var(--c3), var(--c3)),
+        radial-gradient(circle at right, var(--c4), var(--c5), var(--c6));
+
+    background-size: 400% 400%;
+
+    -webkit-animation: movingGradient 10s ease-in-out infinite;
+}
+
+@-webkit-keyframes movingGradient {
+    0% {
+        background-position: 70% 80%;
+    }
+
+    50% {
+        background-position: 0% 120%;
+    }
+
+    100% {
+        background-position: 70% 80%;
+    }
+}
